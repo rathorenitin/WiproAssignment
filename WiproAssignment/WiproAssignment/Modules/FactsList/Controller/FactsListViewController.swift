@@ -12,14 +12,30 @@ class FactsListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var wayToUpdate: UICollectionView.WayToUpdate = .None
     let viewModel = FactsListViewModel()
     private var refreshController = UIRefreshControl()
+    var numberOfColumns = 2
+    var sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    var collectionViewSize : CGSize {
+        get {
+            let minimumInterItemSpacing: CGFloat = 10
+            let side = (collectionView.frame.width - sectionInsets.left - sectionInsets.right - CGFloat(numberOfColumns - 1)*minimumInterItemSpacing - 0.002) / CGFloat(numberOfColumns)
+            
+            return CGSize.init(width: side, height: side)
+        }
+    }
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.initialSetup()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
     }
     
     private func initialSetup() {
@@ -33,11 +49,12 @@ class FactsListViewController: UIViewController {
     
     private func setupTableview() {
         
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-//        collectionView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
-//        collectionView.tintColor = UIColor.black.withAlphaComponent(0.3)
-//        collectionView.registerCell(with: ContactListTableViewCell.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
+        collectionView.tintColor = UIColor.black.withAlphaComponent(0.3)
+        collectionView.registerCell(with: FactCollectionViewCell.self)
+    
     }
     
     private func setupRefreshController() {
@@ -88,7 +105,10 @@ extension FactsListViewController {
         
         DispatchQueue.main.async {
             self.refreshController.endRefreshing()
-            self.collectionView.reloadData()
+            self.wayToUpdate = .ReloadData
+            self.wayToUpdate.performWithCollectionView(collectionView: self.collectionView)
         }
     }
+    
+    
 }

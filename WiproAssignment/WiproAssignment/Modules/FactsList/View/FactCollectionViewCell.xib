@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="82G-ab-OpE" customClass="FactCollectionViewCell" customModule="WiproAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="196" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aCl-QG-IlK">
+                <rect key="frame" x="0.0" y="0.0" width="196" height="183"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-dt-dPo">
+                        <rect key="frame" x="0.0" y="162" width="196" height="21"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOy-Ov-2v0">
+                                <rect key="frame" x="5" y="0.0" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YOy-Ov-2v0" firstAttribute="top" secondItem="yfm-dt-dPo" secondAttribute="top" id="4zK-tk-k1t"/>
+                            <constraint firstAttribute="trailing" secondItem="YOy-Ov-2v0" secondAttribute="trailing" constant="5" id="50W-et-PYK"/>
+                            <constraint firstItem="YOy-Ov-2v0" firstAttribute="leading" secondItem="yfm-dt-dPo" secondAttribute="leading" constant="5" id="IMI-1B-Nic"/>
+                            <constraint firstAttribute="height" constant="21" id="VsI-MO-dkx"/>
+                            <constraint firstAttribute="bottom" secondItem="YOy-Ov-2v0" secondAttribute="bottom" id="tlP-kZ-ah0"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="spT-zQ-221">
+                        <rect key="frame" x="0.0" y="0.0" width="196" height="163"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="spT-zQ-221" secondAttribute="trailing" id="2NQ-xn-5va"/>
+                    <constraint firstItem="yfm-dt-dPo" firstAttribute="leading" secondItem="aCl-QG-IlK" secondAttribute="leading" id="3DA-Cu-SHV"/>
+                    <constraint firstItem="spT-zQ-221" firstAttribute="top" secondItem="aCl-QG-IlK" secondAttribute="top" id="8mu-8r-s3m"/>
+                    <constraint firstAttribute="trailing" secondItem="yfm-dt-dPo" secondAttribute="trailing" id="I52-Mt-JEX"/>
+                    <constraint firstAttribute="bottom" secondItem="spT-zQ-221" secondAttribute="bottom" constant="20" id="oWw-ie-6mO"/>
+                    <constraint firstAttribute="bottom" secondItem="yfm-dt-dPo" secondAttribute="bottom" id="qYu-yk-zKP"/>
+                    <constraint firstItem="spT-zQ-221" firstAttribute="leading" secondItem="aCl-QG-IlK" secondAttribute="leading" id="qzj-Nt-nLY"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="196" height="183"/>
+            <connections>
+                <outlet property="bagroundView" destination="aCl-QG-IlK" id="fGh-E8-KOa"/>
+                <outlet property="factImageView" destination="spT-zQ-221" id="kQK-iK-BE3"/>
+                <outlet property="titleLabel" destination="YOy-Ov-2v0" id="D2R-lP-tNo"/>
+            </connections>
+            <point key="canvasLocation" x="-37.681159420289859" y="-21.09375"/>
+        </collectionViewCell>
+    </objects>
+</document>

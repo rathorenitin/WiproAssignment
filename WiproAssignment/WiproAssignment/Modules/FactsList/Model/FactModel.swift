@@ -6,7 +6,7 @@
 //  Copyright © 2019 Nitin Singh Rathore. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct FeedsModel: Codable {
     let title: String?
@@ -14,12 +14,16 @@ struct FeedsModel: Codable {
 }
 
 
-struct FactModel: Codable {
+class FactModel: Codable {
     
     let title: String?
     let description: String?
     let imageHref: String?
-
+    var isDownloading: Bool = false
+    var isDownloaded: Bool = false
+    var downloadTask: URLSessionDataTask?
+    var thumbNailImage : UIImage?
+    
     enum CodingKeys: String, CodingKey {
         case title
         case description
