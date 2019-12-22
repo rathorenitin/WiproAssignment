@@ -10,11 +10,15 @@ import UIKit
 
 class FactsListViewController: UIViewController {
     
+    //MARK:- @IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK:- Private Properties
+    private var refreshController = UIRefreshControl()
+
+    //MARK:- Public Properties
     var wayToUpdate: UICollectionView.WayToUpdate = .None
     let viewModel = FactsListViewModel()
-    private var refreshController = UIRefreshControl()
     var numberOfColumns = 2
     var sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     var collectionViewSize : CGSize {
@@ -78,7 +82,7 @@ class FactsListViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        navigationItem.title = "Facts"
+        navigationItem.title = ""
         navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.3599199653, green: 0.9019572735, blue: 0.804747045, alpha: 1)
     }
 }

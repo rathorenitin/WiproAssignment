@@ -45,5 +45,35 @@
             </objects>
             <point key="canvasLocation" x="139" y="98"/>
         </scene>
+        <!--Fact Detail View Controller-->
+        <scene sceneID="XGu-oe-kt0">
+            <objects>
+                <viewController storyboardIdentifier="FactDetailViewController" id="PWn-Lt-Gye" customClass="FactDetailViewController" customModule="WiproAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fH-25-DFA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ePl-UA-9lx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Agi-b0-lYo" firstAttribute="trailing" secondItem="ePl-UA-9lx" secondAttribute="trailing" id="7QW-DE-zEp"/>
+                            <constraint firstItem="Agi-b0-lYo" firstAttribute="bottom" secondItem="ePl-UA-9lx" secondAttribute="bottom" id="cCE-xt-ehI"/>
+                            <constraint firstItem="ePl-UA-9lx" firstAttribute="top" secondItem="Agi-b0-lYo" secondAttribute="top" id="nVV-34-8gV"/>
+                            <constraint firstItem="ePl-UA-9lx" firstAttribute="leading" secondItem="Agi-b0-lYo" secondAttribute="leading" id="u1D-ie-UL9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Agi-b0-lYo"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ePl-UA-9lx" id="xes-4M-Z4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Saq-YQ-pCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="98"/>
+        </scene>
     </scenes>
 </document>

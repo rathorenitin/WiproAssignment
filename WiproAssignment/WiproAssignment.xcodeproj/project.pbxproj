@@ -25,6 +25,14 @@
 		1894233023AFA06600C6E988 /* FactsListViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232F23AFA06600C6E988 /* FactsListViewController+UICollectionView.swift */; };
 		1894233323AFA40200C6E988 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894233223AFA40200C6E988 /* ImageDownloader.swift */; };
 		1894233523AFA82700C6E988 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894233423AFA82700C6E988 /* UICollectionView+Extension.swift */; };
+		1894233C23AFBD4800C6E988 /* FactDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894233B23AFBD4800C6E988 /* FactDetailViewModel.swift */; };
+		1894233E23AFBD7D00C6E988 /* FactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894233D23AFBD7D00C6E988 /* FactDetailViewController.swift */; };
+		1894234023AFC16600C6E988 /* FactDetailViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894233F23AFC16600C6E988 /* FactDetailViewController+UITableView.swift */; };
+		1894235023AFC33800C6E988 /* FactDetailPortraitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894234E23AFC33800C6E988 /* FactDetailPortraitTableViewCell.swift */; };
+		1894235123AFC33800C6E988 /* FactDetailPortraitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894234F23AFC33800C6E988 /* FactDetailPortraitTableViewCell.xib */; };
+		1894235423AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235223AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift */; };
+		1894235523AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894235323AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib */; };
+		1894235723AFC59500C6E988 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235623AFC59500C6E988 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,14 @@
 		1894232F23AFA06600C6E988 /* FactsListViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsListViewController+UICollectionView.swift"; sourceTree = "<group>"; };
 		1894233223AFA40200C6E988 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1894233423AFA82700C6E988 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		1894233B23AFBD4800C6E988 /* FactDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailViewModel.swift; sourceTree = "<group>"; };
+		1894233D23AFBD7D00C6E988 /* FactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailViewController.swift; sourceTree = "<group>"; };
+		1894233F23AFC16600C6E988 /* FactDetailViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactDetailViewController+UITableView.swift"; sourceTree = "<group>"; };
+		1894234E23AFC33800C6E988 /* FactDetailPortraitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactDetailPortraitTableViewCell.swift; sourceTree = "<group>"; };
+		1894234F23AFC33800C6E988 /* FactDetailPortraitTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FactDetailPortraitTableViewCell.xib; sourceTree = "<group>"; };
+		1894235223AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailLandscapeTableViewCell.swift; sourceTree = "<group>"; };
+		1894235323AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactDetailLandscapeTableViewCell.xib; sourceTree = "<group>"; };
+		1894235623AFC59500C6E988 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +148,7 @@
 		1894230523AF5F5000C6E988 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1894233623AFBCD900C6E988 /* FactDetail */,
 				1894232023AF682D00C6E988 /* FactsList */,
 			);
 			path = Modules;
@@ -171,6 +188,7 @@
 				1894231723AF642A00C6E988 /* UIStoryboard+Extension.swift */,
 				1894231B23AF647A00C6E988 /* UIViewController+Extension.swift */,
 				1894233423AFA82700C6E988 /* UICollectionView+Extension.swift */,
+				1894235623AFC59500C6E988 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,6 +260,60 @@
 				1894233223AFA40200C6E988 /* ImageDownloader.swift */,
 			);
 			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		1894233623AFBCD900C6E988 /* FactDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1894233723AFBCD900C6E988 /* ViewModel */,
+				1894233823AFBCD900C6E988 /* Controller */,
+				1894233A23AFBCD900C6E988 /* View */,
+			);
+			path = FactDetail;
+			sourceTree = "<group>";
+		};
+		1894233723AFBCD900C6E988 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1894233B23AFBD4800C6E988 /* FactDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1894233823AFBCD900C6E988 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1894233D23AFBD7D00C6E988 /* FactDetailViewController.swift */,
+				1894233F23AFC16600C6E988 /* FactDetailViewController+UITableView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1894233A23AFBCD900C6E988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1894234C23AFC33800C6E988 /* FactDetailLandscapeTableViewCell */,
+				1894234D23AFC33800C6E988 /* FactDetailPortraitTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1894234C23AFC33800C6E988 /* FactDetailLandscapeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1894235223AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift */,
+				1894235323AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib */,
+			);
+			path = FactDetailLandscapeTableViewCell;
+			sourceTree = "<group>";
+		};
+		1894234D23AFC33800C6E988 /* FactDetailPortraitTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1894234E23AFC33800C6E988 /* FactDetailPortraitTableViewCell.swift */,
+				1894234F23AFC33800C6E988 /* FactDetailPortraitTableViewCell.xib */,
+			);
+			path = FactDetailPortraitTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +399,10 @@
 			files = (
 				1894232C23AF9CDC00C6E988 /* FactCollectionViewCell.xib in Resources */,
 				1894230F23AF5F5000C6E988 /* Main.storyboard in Resources */,
+				1894235523AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib in Resources */,
 				1894230D23AF5F5000C6E988 /* Assets.xcassets in Resources */,
 				1894230E23AF5F5000C6E988 /* LaunchScreen.storyboard in Resources */,
+				1894235123AFC33800C6E988 /* FactDetailPortraitTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,17 +421,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				1894232A23AF689800C6E988 /* FactsListViewController.swift in Sources */,
+				1894234023AFC16600C6E988 /* FactDetailViewController+UITableView.swift in Sources */,
+				1894235723AFC59500C6E988 /* UITableView+Extension.swift in Sources */,
+				1894233E23AFBD7D00C6E988 /* FactDetailViewController.swift in Sources */,
 				1894231623AF621F00C6E988 /* FactsRouter.swift in Sources */,
 				1894231423AF619700C6E988 /* NetworkService.swift in Sources */,
+				1894233C23AFBD4800C6E988 /* FactDetailViewModel.swift in Sources */,
 				1894233023AFA06600C6E988 /* FactsListViewController+UICollectionView.swift in Sources */,
 				1894232623AF685500C6E988 /* FactModel.swift in Sources */,
 				1894232E23AF9CF300C6E988 /* FactCollectionViewCell.swift in Sources */,
 				1894233523AFA82700C6E988 /* UICollectionView+Extension.swift in Sources */,
 				1894231F23AF650100C6E988 /* NavigationRouter.swift in Sources */,
 				1894232823AF687000C6E988 /* FactsListViewModel.swift in Sources */,
+				1894235023AFC33800C6E988 /* FactDetailPortraitTableViewCell.swift in Sources */,
 				1894231823AF642A00C6E988 /* UIStoryboard+Extension.swift in Sources */,
 				1894231C23AF647A00C6E988 /* UIViewController+Extension.swift in Sources */,
 				1894233323AFA40200C6E988 /* ImageDownloader.swift in Sources */,
+				1894235423AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift in Sources */,
 				1894231123AF5F5000C6E988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

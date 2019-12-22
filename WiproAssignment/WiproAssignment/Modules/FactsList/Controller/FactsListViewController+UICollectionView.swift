@@ -28,8 +28,10 @@ extension FactsListViewController: UICollectionViewDataSource {
 extension FactsListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        selectedIndexPath = indexPath
-//        moveToImageDetail()
+        if let model = viewModel.getFactPhotoModel(withIndex: indexPath.item){
+            let _ = NavigationRouter.shared.navigateToFactDetailsViewController(fact: model)
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
