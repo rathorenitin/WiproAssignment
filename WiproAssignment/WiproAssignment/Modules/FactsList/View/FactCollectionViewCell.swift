@@ -10,16 +10,19 @@ import UIKit
 
 class FactCollectionViewCell: UICollectionViewCell {
     
+    //MARK:- @IBOutlets
     @IBOutlet weak var bagroundView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var factImageView: UIImageView!
     
+    //MARK:- Public Properties
     var factValue: FactModel? {
         didSet {
             populateData()
         }
     }
     
+    //MARK:- View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         initialSetup()
@@ -29,6 +32,12 @@ class FactCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         resetCell()
     }
+    
+    
+}
+
+//MARK:- Extension for Private Methods
+extension FactCollectionViewCell {
     
     private func initialSetup() {
         self.bagroundView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)

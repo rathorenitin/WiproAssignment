@@ -8,7 +8,7 @@
 
 import UIKit
 
-// MARK: - TableViewDataSource Setup
+// MARK: - TableView DataSource
 extension FactDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +32,7 @@ extension FactDetailViewController: UITableViewDataSource {
     
 }
 
-// MARK: - TableViewDelegate Setup
+// MARK: - TableView Delegate
 extension FactDetailViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

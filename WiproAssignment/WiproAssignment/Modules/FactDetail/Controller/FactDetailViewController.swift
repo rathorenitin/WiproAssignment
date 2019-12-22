@@ -10,6 +10,7 @@ import UIKit
 
 class FactDetailViewController: UIViewController {
     
+    //MARK:- @IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK:- Public Properties
@@ -56,6 +57,7 @@ extension FactDetailViewController {
     
 }
 
+//MARK:- API Call action and obsevers
 extension FactDetailViewController {
     
     func getContactDetails() {

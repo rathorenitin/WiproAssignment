@@ -15,7 +15,7 @@ class FactsListViewController: UIViewController {
     
     //MARK:- Private Properties
     private var refreshController = UIRefreshControl()
-
+    
     //MARK:- Public Properties
     var wayToUpdate: UICollectionView.WayToUpdate = .None
     let viewModel = FactsListViewModel()
@@ -42,6 +42,20 @@ class FactsListViewController: UIViewController {
         collectionView.collectionViewLayout.invalidateLayout()
     }
     
+    
+    
+    //MARK:- Action Methods
+    @objc func pullToRefreshData() {
+        
+        self.fetchContacts()
+    }
+    
+    
+}
+
+//MARK:- Extension for Private Methods
+extension FactsListViewController {
+    
     private func initialSetup() {
         
         self.setupTableview()
@@ -58,7 +72,7 @@ class FactsListViewController: UIViewController {
         collectionView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
         collectionView.tintColor = UIColor.black.withAlphaComponent(0.3)
         collectionView.registerCell(with: FactCollectionViewCell.self)
-    
+        
     }
     
     private func setupRefreshController() {
@@ -68,12 +82,6 @@ class FactsListViewController: UIViewController {
                                     action: #selector(pullToRefreshData),
                                     for: UIControl.Event.valueChanged)
         collectionView.refreshControl = refreshController
-    }
-    
-    //MARK:- Action Methods
-    @objc func pullToRefreshData() {
-        
-        self.fetchContacts()
     }
     
     //MARK:- Setting up navigationView
@@ -86,7 +94,6 @@ class FactsListViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.3599199653, green: 0.9019572735, blue: 0.804747045, alpha: 1)
     }
 }
-
 
 //MARK:- API Call action and obsevers
 extension FactsListViewController {
@@ -113,6 +120,5 @@ extension FactsListViewController {
             self.wayToUpdate.performWithCollectionView(collectionView: self.collectionView)
         }
     }
-    
     
 }

@@ -10,16 +10,18 @@ import UIKit
 
 class FactDetailLandscapeTableViewCell: UITableViewCell {
     
+    //MARK:- @IBOutlets
     @IBOutlet weak var factImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    //MARK:- Public Properties
     var factValue: FactModel? {
         didSet {
             populateData()
         }
     }
     
-    
+    //MARK:- View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         initialSetup()
@@ -29,6 +31,11 @@ class FactDetailLandscapeTableViewCell: UITableViewCell {
         super.prepareForReuse()
         resetCell()
     }
+    
+}
+
+//MARK:- Extension for Private Methods
+extension FactDetailLandscapeTableViewCell {
     
     private func initialSetup() {
         self.factImageView.contentMode = .scaleAspectFill
@@ -53,5 +60,4 @@ class FactDetailLandscapeTableViewCell: UITableViewCell {
             resetCell()
         }
     }
-    
 }

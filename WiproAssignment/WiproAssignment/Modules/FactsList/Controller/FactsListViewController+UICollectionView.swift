@@ -84,7 +84,7 @@ extension FactsListViewController: UICollectionViewDelegate {
     
     
 }
-
+// MARK: Collection View Delegate FlowLayout
 extension FactsListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -96,7 +96,7 @@ extension FactsListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-
+// MARK: ScrollView Delegate
 extension FactsListViewController: UIScrollViewDelegate {
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
