@@ -1,0 +1,24 @@
+//
+//  AppDelegate.swift
+//  WiproAssignment
+//
+//  Created by Apple on 22/12/19.
+//  Copyright © 2019 Nitin Singh Rathore. All rights reserved.
+//
+
+import UIKit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        NavigationRouter.shared.initialViewController(window: window)
+        return true
+    }
+    
+    
+}
+

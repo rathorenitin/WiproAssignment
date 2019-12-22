@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		189422DD23AF5D9A00C6E988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189422DC23AF5D9A00C6E988 /* AppDelegate.swift */; };
-		189422DF23AF5D9A00C6E988 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189422DE23AF5D9A00C6E988 /* SceneDelegate.swift */; };
-		189422E123AF5D9A00C6E988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189422E023AF5D9A00C6E988 /* ViewController.swift */; };
-		189422E423AF5D9A00C6E988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189422E223AF5D9A00C6E988 /* Main.storyboard */; };
-		189422E623AF5D9B00C6E988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189422E523AF5D9B00C6E988 /* Assets.xcassets */; };
-		189422E923AF5D9B00C6E988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189422E723AF5D9B00C6E988 /* LaunchScreen.storyboard */; };
 		189422F423AF5D9B00C6E988 /* WiproAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189422F323AF5D9B00C6E988 /* WiproAssignmentTests.swift */; };
+		1894230D23AF5F5000C6E988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189422FF23AF5F5000C6E988 /* Assets.xcassets */; };
+		1894230E23AF5F5000C6E988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1894230023AF5F5000C6E988 /* LaunchScreen.storyboard */; };
+		1894230F23AF5F5000C6E988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1894230223AF5F5000C6E988 /* Main.storyboard */; };
+		1894231123AF5F5000C6E988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894230B23AF5F5000C6E988 /* AppDelegate.swift */; };
+		1894231423AF619700C6E988 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894231323AF619700C6E988 /* NetworkService.swift */; };
+		1894231623AF621F00C6E988 /* FactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894231523AF621F00C6E988 /* FactsRouter.swift */; };
+		1894231823AF642A00C6E988 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894231723AF642A00C6E988 /* UIStoryboard+Extension.swift */; };
+		1894231C23AF647A00C6E988 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894231B23AF647A00C6E988 /* UIViewController+Extension.swift */; };
+		1894231F23AF650100C6E988 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894231E23AF650100C6E988 /* NavigationRouter.swift */; };
+		1894232623AF685500C6E988 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232523AF685500C6E988 /* FactModel.swift */; };
+		1894232823AF687000C6E988 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232723AF687000C6E988 /* FactsListViewModel.swift */; };
+		1894232A23AF689800C6E988 /* FactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232923AF689800C6E988 /* FactsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +34,22 @@
 
 /* Begin PBXFileReference section */
 		189422D923AF5D9A00C6E988 /* WiproAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiproAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		189422DC23AF5D9A00C6E988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		189422DE23AF5D9A00C6E988 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		189422E023AF5D9A00C6E988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		189422E323AF5D9A00C6E988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		189422E523AF5D9B00C6E988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		189422E823AF5D9B00C6E988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		189422EA23AF5D9B00C6E988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189422EF23AF5D9B00C6E988 /* WiproAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiproAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189422F323AF5D9B00C6E988 /* WiproAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproAssignmentTests.swift; sourceTree = "<group>"; };
 		189422F523AF5D9B00C6E988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189422FF23AF5F5000C6E988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1894230123AF5F5000C6E988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1894230323AF5F5000C6E988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1894230423AF5F5000C6E988 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1894230B23AF5F5000C6E988 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1894231323AF619700C6E988 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1894231523AF621F00C6E988 /* FactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsRouter.swift; sourceTree = "<group>"; };
+		1894231723AF642A00C6E988 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		1894231B23AF647A00C6E988 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		1894231E23AF650100C6E988 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		1894232523AF685500C6E988 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
+		1894232723AF687000C6E988 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
+		1894232923AF689800C6E988 /* FactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +91,10 @@
 		189422DB23AF5D9A00C6E988 /* WiproAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				189422DC23AF5D9A00C6E988 /* AppDelegate.swift */,
-				189422DE23AF5D9A00C6E988 /* SceneDelegate.swift */,
-				189422E023AF5D9A00C6E988 /* ViewController.swift */,
-				189422E223AF5D9A00C6E988 /* Main.storyboard */,
-				189422E523AF5D9B00C6E988 /* Assets.xcassets */,
-				189422E723AF5D9B00C6E988 /* LaunchScreen.storyboard */,
-				189422EA23AF5D9B00C6E988 /* Info.plist */,
+				1894230A23AF5F5000C6E988 /* AppDelegate */,
+				1894230623AF5F5000C6E988 /* CommonFiles */,
+				1894230523AF5F5000C6E988 /* Modules */,
+				189422FE23AF5F5000C6E988 /* Resources */,
 			);
 			path = WiproAssignment;
 			sourceTree = "<group>";
@@ -97,6 +106,119 @@
 				189422F523AF5D9B00C6E988 /* Info.plist */,
 			);
 			path = WiproAssignmentTests;
+			sourceTree = "<group>";
+		};
+		189422FE23AF5F5000C6E988 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				189422FF23AF5F5000C6E988 /* Assets.xcassets */,
+				1894230023AF5F5000C6E988 /* LaunchScreen.storyboard */,
+				1894230223AF5F5000C6E988 /* Main.storyboard */,
+				1894230423AF5F5000C6E988 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1894230523AF5F5000C6E988 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1894232023AF682D00C6E988 /* FactsList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1894230623AF5F5000C6E988 /* CommonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1894231D23AF64EB00C6E988 /* Navigation */,
+				1894230723AF5F5000C6E988 /* Network */,
+				1894230923AF5F5000C6E988 /* Extensions */,
+			);
+			path = CommonFiles;
+			sourceTree = "<group>";
+		};
+		1894230723AF5F5000C6E988 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1894230823AF5F5000C6E988 /* Router */,
+				1894231323AF619700C6E988 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1894230823AF5F5000C6E988 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1894231523AF621F00C6E988 /* FactsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1894230923AF5F5000C6E988 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1894231723AF642A00C6E988 /* UIStoryboard+Extension.swift */,
+				1894231B23AF647A00C6E988 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1894230A23AF5F5000C6E988 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1894230B23AF5F5000C6E988 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1894231D23AF64EB00C6E988 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1894231E23AF650100C6E988 /* NavigationRouter.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1894232023AF682D00C6E988 /* FactsList */ = {
+			isa = PBXGroup;
+			children = (
+				1894232123AF682D00C6E988 /* ViewModel */,
+				1894232223AF682D00C6E988 /* Controller */,
+				1894232323AF682D00C6E988 /* Model */,
+				1894232423AF682D00C6E988 /* View */,
+			);
+			path = FactsList;
+			sourceTree = "<group>";
+		};
+		1894232123AF682D00C6E988 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1894232723AF687000C6E988 /* FactsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1894232223AF682D00C6E988 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1894232923AF689800C6E988 /* FactsListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1894232323AF682D00C6E988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1894232523AF685500C6E988 /* FactModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1894232423AF682D00C6E988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189422E923AF5D9B00C6E988 /* LaunchScreen.storyboard in Resources */,
-				189422E623AF5D9B00C6E988 /* Assets.xcassets in Resources */,
-				189422E423AF5D9A00C6E988 /* Main.storyboard in Resources */,
+				1894230F23AF5F5000C6E988 /* Main.storyboard in Resources */,
+				1894230D23AF5F5000C6E988 /* Assets.xcassets in Resources */,
+				1894230E23AF5F5000C6E988 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189422E123AF5D9A00C6E988 /* ViewController.swift in Sources */,
-				189422DD23AF5D9A00C6E988 /* AppDelegate.swift in Sources */,
-				189422DF23AF5D9A00C6E988 /* SceneDelegate.swift in Sources */,
+				1894232A23AF689800C6E988 /* FactsListViewController.swift in Sources */,
+				1894231623AF621F00C6E988 /* FactsRouter.swift in Sources */,
+				1894231423AF619700C6E988 /* NetworkService.swift in Sources */,
+				1894232623AF685500C6E988 /* FactModel.swift in Sources */,
+				1894231F23AF650100C6E988 /* NavigationRouter.swift in Sources */,
+				1894232823AF687000C6E988 /* FactsListViewModel.swift in Sources */,
+				1894231823AF642A00C6E988 /* UIStoryboard+Extension.swift in Sources */,
+				1894231C23AF647A00C6E988 /* UIViewController+Extension.swift in Sources */,
+				1894231123AF5F5000C6E988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,20 +353,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		189422E223AF5D9A00C6E988 /* Main.storyboard */ = {
+		1894230023AF5F5000C6E988 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				189422E323AF5D9A00C6E988 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		189422E723AF5D9B00C6E988 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				189422E823AF5D9B00C6E988 /* Base */,
+				1894230123AF5F5000C6E988 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1894230223AF5F5000C6E988 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1894230323AF5F5000C6E988 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -294,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -362,14 +490,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WiproAssignment/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/WiproAssignment/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.assignment.WiproAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,14 +509,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WiproAssignment/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/WiproAssignment/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.assignment.WiproAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
