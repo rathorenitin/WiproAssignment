@@ -22,7 +22,7 @@ extension FactDetailViewController: UITableViewDataSource {
             cell.factValue = self.viewModel.FactDetails
             return cell
         } else {
-           let cell = tableView.dequeueCell(with: FactDetailPortraitTableViewCell.self)
+           let cell = tableView.dequeueCell(with: FactDetailLandscapeTableViewCell.self)
             cell.factValue = self.viewModel.FactDetails
             return cell
         }
