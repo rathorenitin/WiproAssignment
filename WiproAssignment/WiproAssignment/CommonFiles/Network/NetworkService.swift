@@ -24,6 +24,9 @@ class NetworkService: NetworkServiceProtocol {
                                           timeoutInterval: 10.0)
         request.httpMethod = endPoint.getHTTPMethod
         
+        let headers = ["Content-Type": "application/json"]
+        request.allHTTPHeaderFields = headers
+        
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let dataTask = session.dataTask(with: request as URLRequest,
                                         completionHandler: { (data, response, error) -> Void in
