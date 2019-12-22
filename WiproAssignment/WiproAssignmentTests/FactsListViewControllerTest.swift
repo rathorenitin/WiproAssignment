@@ -1,5 +1,5 @@
 //
-//  WiproAssignmentTests.swift
+//  FactsListViewControllerTest.swift
 //  WiproAssignmentTests
 //
 //  Created by Apple on 22/12/19.
@@ -7,9 +7,8 @@
 //
 
 import XCTest
-@testable import WiproAssignment
 
-class WiproAssignmentTests: XCTestCase {
+class FactsListViewControllerTest: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

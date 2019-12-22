@@ -37,8 +37,8 @@ class FactsListViewModel: FactsListViewModelProtocol {
     func fetchFactsList() {
         networkService.webRequest(.getFactsList, { response in
             let utf8Data = String(decoding: response, as: UTF8.self).data(using: .utf8)
-            let feedModel = try! JSONDecoder().decode(FeedsModel.self, from: utf8Data ?? response)
-            if let facts = feedModel.rows {
+            let feedModel = try? JSONDecoder().decode(FeedsModel.self, from: utf8Data ?? response)
+            if let facts = feedModel?.rows {
                 self.factList = facts
             } else {
                 print("Unable to decode json for facts list.")

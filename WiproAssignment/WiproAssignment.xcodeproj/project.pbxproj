@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		189422F423AF5D9B00C6E988 /* WiproAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189422F323AF5D9B00C6E988 /* WiproAssignmentTests.swift */; };
 		1894230D23AF5F5000C6E988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189422FF23AF5F5000C6E988 /* Assets.xcassets */; };
 		1894230E23AF5F5000C6E988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1894230023AF5F5000C6E988 /* LaunchScreen.storyboard */; };
 		1894230F23AF5F5000C6E988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1894230223AF5F5000C6E988 /* Main.storyboard */; };
@@ -33,6 +32,9 @@
 		1894235423AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235223AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift */; };
 		1894235523AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894235323AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib */; };
 		1894235723AFC59500C6E988 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235623AFC59500C6E988 /* UITableView+Extension.swift */; };
+		1894235A23AFCE7600C6E988 /* FactsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235923AFCE7600C6E988 /* FactsListViewControllerTest.swift */; };
+		1894235C23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235B23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift */; };
+		1894235E23AFCFFF00C6E988 /* FactsListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235D23AFCFFF00C6E988 /* FactsListViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,6 @@
 /* Begin PBXFileReference section */
 		189422D923AF5D9A00C6E988 /* WiproAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiproAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189422EF23AF5D9B00C6E988 /* WiproAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiproAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		189422F323AF5D9B00C6E988 /* WiproAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproAssignmentTests.swift; sourceTree = "<group>"; };
 		189422F523AF5D9B00C6E988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189422FF23AF5F5000C6E988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1894230123AF5F5000C6E988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +77,10 @@
 		1894235223AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailLandscapeTableViewCell.swift; sourceTree = "<group>"; };
 		1894235323AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactDetailLandscapeTableViewCell.xib; sourceTree = "<group>"; };
 		1894235623AFC59500C6E988 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1894235823AFCE7600C6E988 /* WiproAssignmentTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiproAssignmentTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1894235923AFCE7600C6E988 /* FactsListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewControllerTest.swift; sourceTree = "<group>"; };
+		1894235B23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailViewControllerTest.swift; sourceTree = "<group>"; };
+		1894235D23AFCFFF00C6E988 /* FactsListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +133,11 @@
 		189422F223AF5D9B00C6E988 /* WiproAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				189422F323AF5D9B00C6E988 /* WiproAssignmentTests.swift */,
 				189422F523AF5D9B00C6E988 /* Info.plist */,
+				1894235823AFCE7600C6E988 /* WiproAssignmentTests-Bridging-Header.h */,
+				1894235923AFCE7600C6E988 /* FactsListViewControllerTest.swift */,
+				1894235B23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift */,
+				1894235D23AFCFFF00C6E988 /* FactsListViewModelTest.swift */,
 			);
 			path = WiproAssignmentTests;
 			sourceTree = "<group>";
@@ -369,6 +377,7 @@
 					};
 					189422EE23AF5D9B00C6E988 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 						TestTargetID = 189422D823AF5D9A00C6E988;
 					};
 				};
@@ -446,7 +455,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189422F423AF5D9B00C6E988 /* WiproAssignmentTests.swift in Sources */,
+				1894235A23AFCE7600C6E988 /* FactsListViewControllerTest.swift in Sources */,
+				1894235C23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift in Sources */,
+				1894235E23AFCFFF00C6E988 /* FactsListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +648,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiproAssignmentTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -647,6 +659,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.assignment.WiproAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WiproAssignmentTests/WiproAssignmentTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiproAssignment.app/WiproAssignment";
@@ -658,6 +672,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WiproAssignmentTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -668,6 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wipro.assignment.WiproAssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WiproAssignmentTests/WiproAssignmentTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WiproAssignment.app/WiproAssignment";
