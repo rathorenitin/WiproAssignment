@@ -56,8 +56,6 @@ extension FactDetailViewController {
     }
     
     private func setupNavigationView() {
-        
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.3599199653, green: 0.9019572735, blue: 0.804747045, alpha: 1)
         navigationItem.title = self.viewModel.FactDetails?.title ?? ""
     }
     

@@ -24,13 +24,20 @@ class FactsListViewModel: FactsListViewModelProtocol {
     
     var contactDidChanges: ((Bool, Bool) -> Void)?
     var errorHandler: ((String) -> Void)?
+    var titleDidChanges: ((String) -> Void)?
     let networkService: NetworkServiceProtocol = NetworkService()
     private var factList = [FactModel]() {
         didSet {
             self.contactDidChanges?(true, false)
         }
     }
-    
+    private var title: String? {
+        didSet {
+            if let value = title {
+                self.titleDidChanges?(value)
+            }
+        }
+    }
     init() {
         factList = [FactModel]()
     }
@@ -42,6 +49,7 @@ class FactsListViewModel: FactsListViewModelProtocol {
             
             let utf8Data = String(decoding: response, as: UTF8.self).data(using: .utf8)
             let feedModel = try? JSONDecoder().decode(FeedsModel.self, from: utf8Data ?? response)
+            strongSelf.title = feedModel?.title
             if let facts = feedModel?.rows {
                 strongSelf.factList = facts
             } else {

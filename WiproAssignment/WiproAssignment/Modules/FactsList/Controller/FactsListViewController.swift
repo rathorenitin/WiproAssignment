@@ -95,11 +95,8 @@ extension FactsListViewController {
     //MARK:- Setting up navigationView
     private func setupNavigationView() {
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        navigationItem.title = ""
-        navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.3599199653, green: 0.9019572735, blue: 0.804747045, alpha: 1)
     }
 }
 
@@ -126,6 +123,14 @@ extension FactsListViewController {
                 strongSelf.showAlert(with: "ERROR", message: errorMessage)
             }
         }
+        
+        self.viewModel.titleDidChanges = { [weak self] (title) in
+            DispatchQueue.main.async {
+            guard let strongSelf = self else { return }
+            strongSelf.navigationItem.title = title
+            }
+        }
+        
     }
     
     func reloadTableView() {
