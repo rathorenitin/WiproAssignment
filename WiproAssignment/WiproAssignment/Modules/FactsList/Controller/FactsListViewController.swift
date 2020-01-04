@@ -10,13 +10,23 @@ import UIKit
 
 class FactsListViewController: UIViewController {
     
-    //MARK:- @IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK:- Private Properties
     private var refreshController = UIRefreshControl()
     
     //MARK:- Public Properties
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
+        collectionView.tintColor = UIColor.black.withAlphaComponent(0.3)
+        collectionView.registerCell(with: FactCollectionViewCell.self)
+        return collectionView
+    }()
+
     var wayToUpdate: UICollectionView.WayToUpdate = .None
     let viewModel = FactsListViewModel()
     var numberOfColumns = 2
@@ -66,13 +76,11 @@ extension FactsListViewController {
     }
     
     private func setupTableview() {
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
-        collectionView.tintColor = UIColor.black.withAlphaComponent(0.3)
-        collectionView.registerCell(with: FactCollectionViewCell.self)
-        
+        self.view.addSubview(collectionView)
+        collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
     private func setupRefreshController() {
