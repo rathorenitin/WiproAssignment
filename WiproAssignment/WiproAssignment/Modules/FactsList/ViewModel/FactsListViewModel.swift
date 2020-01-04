@@ -23,6 +23,7 @@ class FactsListViewModel: FactsListViewModelProtocol {
     }
     
     var contactDidChanges: ((Bool, Bool) -> Void)?
+    var errorOccured: ((String) -> Void)?
     let networkService: NetworkServiceProtocol = NetworkService()
     private var factList = [FactModel]() {
         didSet {
@@ -42,9 +43,11 @@ class FactsListViewModel: FactsListViewModelProtocol {
                 self.factList = facts
             } else {
                 print("Unable to decode json for facts list.")
+                self.errorOccured?("Unable to decode json for facts list.")
             }
         }) { error in
             print("Error : \(error)")
+            self.errorOccured?(error.localizedDescription)
         }
     }
     

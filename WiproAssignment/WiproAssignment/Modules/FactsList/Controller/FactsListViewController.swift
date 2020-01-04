@@ -26,7 +26,7 @@ class FactsListViewController: UIViewController {
         collectionView.register(FactCollectionViewCell.self, forCellWithReuseIdentifier: "\(FactCollectionViewCell.self)")
         return collectionView
     }()
-
+    
     var wayToUpdate: UICollectionView.WayToUpdate = .None
     let viewModel = FactsListViewModel()
     var numberOfColumns = 2
@@ -116,6 +116,12 @@ extension FactsListViewController {
         self.viewModel.contactDidChanges = { (finished, error) in
             if !error {
                 self.reloadTableView()
+            }
+        }
+        
+        self.viewModel.errorOccured = { (errorMessage) in
+            DispatchQueue.main.async {
+                self.showAlert(with: "ERROR", message: errorMessage)
             }
         }
     }
