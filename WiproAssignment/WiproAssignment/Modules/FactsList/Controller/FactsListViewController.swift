@@ -120,7 +120,7 @@ extension FactsListViewController {
             }
         }
         
-        self.viewModel.errorOccured = { [weak self] (errorMessage) in
+        self.viewModel.errorHandler = { [weak self] (errorMessage) in
             DispatchQueue.main.async {
                 guard let strongSelf = self else { return }
                 strongSelf.showAlert(with: "ERROR", message: errorMessage)

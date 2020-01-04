@@ -23,7 +23,7 @@ class FactsListViewModel: FactsListViewModelProtocol {
     }
     
     var contactDidChanges: ((Bool, Bool) -> Void)?
-    var errorOccured: ((String) -> Void)?
+    var errorHandler: ((String) -> Void)?
     let networkService: NetworkServiceProtocol = NetworkService()
     private var factList = [FactModel]() {
         didSet {
@@ -46,14 +46,14 @@ class FactsListViewModel: FactsListViewModelProtocol {
                 strongSelf.factList = facts
             } else {
                 print("Unable to decode json for facts list.")
-                strongSelf.errorOccured?("Unable to decode json for facts list.")
+                strongSelf.errorHandler?("Unable to decode json for facts list.")
             }
         }) { [weak self] error in
             
             guard let strongSelf = self else {return}
             
             print("Error : \(error)")
-            strongSelf.errorOccured?(error.localizedDescription)
+            strongSelf.errorHandler?(error.localizedDescription)
         }
     }
     
