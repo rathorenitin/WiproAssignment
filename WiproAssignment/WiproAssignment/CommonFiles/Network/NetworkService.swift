@@ -6,7 +6,7 @@
 //  Copyright © 2019 Nitin Singh Rathore. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //MARK:- NetworkService Protocol to hit a service
 protocol NetworkServiceProtocol {
@@ -16,6 +16,20 @@ protocol NetworkServiceProtocol {
 
 //MARK:- NetworkService class to hit web services
 class NetworkService: NetworkServiceProtocol {
+    
+    let reachability = try! Reachability()
+    
+    init() {
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    
+    deinit {
+        reachability.stopNotifier()
+    }
     
     func webRequest(_ endPoint: FactsRouter, _ success: @escaping (Data) -> Void, _ failure: @escaping (Error) -> Void) {
                 
@@ -27,15 +41,27 @@ class NetworkService: NetworkServiceProtocol {
         let headers = ["Content-Type": "application/json"]
         request.allHTTPHeaderFields = headers
         
+        if reachability.connection == .unavailable {
+            request.cachePolicy = .returnCacheDataDontLoad
+        }
+        
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let dataTask = session.dataTask(with: request as URLRequest,
-                                        completionHandler: { (data, response, error) -> Void in
+                                        completionHandler: { [weak self] (data, response, error) -> Void in
                                             if error != nil, let error = error {
                                                 failure(error)
                                             } else if let data = data {
                                                 success(data)
                                             }
+                                            self?.handleNetworkActivityIndicator(false)
         })
+        handleNetworkActivityIndicator(true)
         dataTask.resume()
+    }
+    
+    private func handleNetworkActivityIndicator(_ show: Bool) {
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = show
+        }
     }
 }

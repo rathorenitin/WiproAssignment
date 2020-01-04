@@ -32,6 +32,7 @@
 		1894235A23AFCE7600C6E988 /* FactsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235923AFCE7600C6E988 /* FactsListViewControllerTest.swift */; };
 		1894235C23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235B23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift */; };
 		1894235E23AFCFFF00C6E988 /* FactsListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894235D23AFCFFF00C6E988 /* FactsListViewModelTest.swift */; };
+		18D51BFC23C06F3C00DC5EFA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D51BFB23C06F3C00DC5EFA /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		1894235923AFCE7600C6E988 /* FactsListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewControllerTest.swift; sourceTree = "<group>"; };
 		1894235B23AFCE9D00C6E988 /* FactDetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailViewControllerTest.swift; sourceTree = "<group>"; };
 		1894235D23AFCFFF00C6E988 /* FactsListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelTest.swift; sourceTree = "<group>"; };
+		18D51BFB23C06F3C00DC5EFA /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		1894230723AF5F5000C6E988 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				18D51BFA23C06F3C00DC5EFA /* Reachability */,
 				1894233123AFA3F400C6E988 /* ImageDownloader */,
 				1894230823AF5F5000C6E988 /* Router */,
 				1894231323AF619700C6E988 /* NetworkService.swift */,
@@ -315,6 +318,14 @@
 			path = FactDetailPortraitTableViewCell;
 			sourceTree = "<group>";
 		};
+		18D51BFA23C06F3C00DC5EFA /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				18D51BFB23C06F3C00DC5EFA /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,6 +446,7 @@
 				1894231C23AF647A00C6E988 /* UIViewController+Extension.swift in Sources */,
 				1894233323AFA40200C6E988 /* ImageDownloader.swift in Sources */,
 				1894235423AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.swift in Sources */,
+				18D51BFC23C06F3C00DC5EFA /* Reachability.swift in Sources */,
 				1894231123AF5F5000C6E988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
