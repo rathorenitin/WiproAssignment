@@ -11,9 +11,22 @@ import UIKit
 class FactDetailViewController: UIViewController {
     
     //MARK:- @IBOutlets
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
     
     //MARK:- Public Properties
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tintColor = UIColor.black.withAlphaComponent(0.3)
+        tableView.separatorStyle = .none
+        tableView.register(FactDetailPortraitTableViewCell.self, forCellReuseIdentifier: "\(FactDetailPortraitTableViewCell.self)")
+        tableView.register(FactDetailLandscapeTableViewCell.self, forCellReuseIdentifier: "\(FactDetailLandscapeTableViewCell.self)")
+        return tableView
+    }()
+    
     let viewModel = ContactDetailsViewModel()
     
     //MARK:- View Life Cycle
@@ -50,13 +63,11 @@ extension FactDetailViewController {
     
     //MARK:- Setting up Tableviews
     private func setupTableview() {
-        
-        tableView.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.tintColor = UIColor.black.withAlphaComponent(0.3)
-        tableView.registerCell(with: FactDetailPortraitTableViewCell.self)
-        tableView.registerCell(with: FactDetailLandscapeTableViewCell.self)
+        self.view.addSubview(tableView)
+        tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
 }

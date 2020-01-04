@@ -19,13 +19,13 @@ class NavigationRouter {
 
     func initialViewController(window: UIWindow?) {
         
-        let factsListViewController = FactsListViewController.instantiate()
+        let factsListViewController = FactsListViewController()
         navigationController = UINavigationController(rootViewController: factsListViewController)
         window?.rootViewController = navigationController
     }
     
     func navigateToFactDetailsViewController(fact: FactModel)-> FactDetailViewController {
-        let factDetailViewController = FactDetailViewController.instantiate()
+        let factDetailViewController = FactDetailViewController()
         factDetailViewController.viewModel.FactDetails = fact
         navigationController.pushViewController(factDetailViewController, animated: true)
         return factDetailViewController

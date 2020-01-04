@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rcl-ZJ-mI8">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,69 +8,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Facts List View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--View Controller-->
+        <scene sceneID="zZo-DL-hCf">
             <objects>
-                <viewController storyboardIdentifier="FactsListViewController" id="BYZ-38-t0r" customClass="FactsListViewController" customModule="WiproAssignment" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="rcl-ZJ-mI8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dgp-qP-rcL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xUf-Em-BTh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1EF-Up-Cjg">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xUf-Em-BTh" secondAttribute="bottom" id="Xc3-FC-1dZ"/>
-                            <constraint firstItem="xUf-Em-BTh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uOt-M5-DOO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xUf-Em-BTh" secondAttribute="trailing" id="uZF-VV-q8w"/>
-                            <constraint firstItem="xUf-Em-BTh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xYd-AJ-cjK"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="BiY-zf-PV6"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sh-qQ-GD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="98"/>
-        </scene>
-        <!--Fact Detail View Controller-->
-        <scene sceneID="XGu-oe-kt0">
-            <objects>
-                <viewController storyboardIdentifier="FactDetailViewController" id="PWn-Lt-Gye" customClass="FactDetailViewController" customModule="WiproAssignment" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1fH-25-DFA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ePl-UA-9lx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Agi-b0-lYo" firstAttribute="trailing" secondItem="ePl-UA-9lx" secondAttribute="trailing" id="7QW-DE-zEp"/>
-                            <constraint firstItem="Agi-b0-lYo" firstAttribute="bottom" secondItem="ePl-UA-9lx" secondAttribute="bottom" id="cCE-xt-ehI"/>
-                            <constraint firstItem="ePl-UA-9lx" firstAttribute="top" secondItem="Agi-b0-lYo" secondAttribute="top" id="nVV-34-8gV"/>
-                            <constraint firstItem="ePl-UA-9lx" firstAttribute="leading" secondItem="Agi-b0-lYo" secondAttribute="leading" id="u1D-ie-UL9"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Agi-b0-lYo"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="ePl-UA-9lx" id="xes-4M-Z4G"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Saq-YQ-pCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="762" y="98"/>
+            <point key="canvasLocation" x="409" y="-214"/>
         </scene>
     </scenes>
 </document>

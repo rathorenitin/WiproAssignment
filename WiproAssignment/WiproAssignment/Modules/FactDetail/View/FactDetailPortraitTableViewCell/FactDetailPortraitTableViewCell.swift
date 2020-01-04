@@ -11,10 +11,24 @@ import UIKit
 class FactDetailPortraitTableViewCell: UITableViewCell {
     
     //MARK:- @IBOutlets
-    @IBOutlet weak var factImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+
     
     //MARK:- Public Properties
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.clipsToBounds = true
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    let factImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode =  .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
     var factValue: FactModel? {
         didSet {
             populateData()
@@ -22,9 +36,13 @@ class FactDetailPortraitTableViewCell: UITableViewCell {
     }
     
     //MARK:- View Life Cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         initialSetup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func prepareForReuse() {
@@ -38,7 +56,25 @@ class FactDetailPortraitTableViewCell: UITableViewCell {
 extension FactDetailPortraitTableViewCell {
     
     private func initialSetup() {
-        self.factImageView.contentMode = .scaleAspectFill
+        setupCell()
+    }
+    
+    private func setupCell() {
+        
+        // adding imageview
+        self.contentView.addSubview(factImageView)
+        factImageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
+        factImageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
+        factImageView.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
+        factImageView.heightAnchor.constraint(equalToConstant: 320).isActive = true
+        
+        // adding title label
+        self.contentView.addSubview(descriptionLabel)
+        descriptionLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: self.factImageView.bottomAnchor, constant: 10).isActive = true
+        descriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 10).isActive = true
+        descriptionLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
     }
     
     //reset cell to initial state
@@ -52,7 +88,7 @@ extension FactDetailPortraitTableViewCell {
     
     private func populateData() {
         guard let fact = factValue else { return }
-        descriptionLabel?.text = fact.description
+        descriptionLabel.text = fact.description
         if let image = fact.thumbNailImage {
             factImageView.image = image
             factImageView.contentMode = .scaleAspectFill
