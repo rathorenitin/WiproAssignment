@@ -113,25 +113,28 @@ extension FactsListViewController {
     
     func prepareViewModelObserver() {
         
-        self.viewModel.contactDidChanges = { (finished, error) in
+        self.viewModel.contactDidChanges = { [weak self] (finished, error) in
+            guard let strongSelf = self else { return }
             if !error {
-                self.reloadTableView()
+                strongSelf.reloadTableView()
             }
         }
         
-        self.viewModel.errorOccured = { (errorMessage) in
+        self.viewModel.errorOccured = { [weak self] (errorMessage) in
             DispatchQueue.main.async {
-                self.showAlert(with: "ERROR", message: errorMessage)
+                guard let strongSelf = self else { return }
+                strongSelf.showAlert(with: "ERROR", message: errorMessage)
             }
         }
     }
     
     func reloadTableView() {
         
-        DispatchQueue.main.async {
-            self.refreshController.endRefreshing()
-            self.wayToUpdate = .ReloadData
-            self.wayToUpdate.performWithCollectionView(collectionView: self.collectionView)
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.refreshController.endRefreshing()
+            strongSelf.wayToUpdate = .ReloadData
+            strongSelf.wayToUpdate.performWithCollectionView(collectionView: strongSelf.collectionView)
         }
     }
     

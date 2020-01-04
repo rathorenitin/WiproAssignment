@@ -36,18 +36,24 @@ class FactsListViewModel: FactsListViewModelProtocol {
     }
     
     func fetchFactsList() {
-        networkService.webRequest(.getFactsList, { response in
+        networkService.webRequest(.getFactsList, { [weak self] response in
+            
+            guard let strongSelf = self else {return}
+            
             let utf8Data = String(decoding: response, as: UTF8.self).data(using: .utf8)
             let feedModel = try? JSONDecoder().decode(FeedsModel.self, from: utf8Data ?? response)
             if let facts = feedModel?.rows {
-                self.factList = facts
+                strongSelf.factList = facts
             } else {
                 print("Unable to decode json for facts list.")
-                self.errorOccured?("Unable to decode json for facts list.")
+                strongSelf.errorOccured?("Unable to decode json for facts list.")
             }
-        }) { error in
+        }) { [weak self] error in
+            
+            guard let strongSelf = self else {return}
+            
             print("Error : \(error)")
-            self.errorOccured?(error.localizedDescription)
+            strongSelf.errorOccured?(error.localizedDescription)
         }
     }
     
