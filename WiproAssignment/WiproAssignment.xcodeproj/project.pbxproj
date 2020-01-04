@@ -19,7 +19,6 @@
 		1894232623AF685500C6E988 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232523AF685500C6E988 /* FactModel.swift */; };
 		1894232823AF687000C6E988 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232723AF687000C6E988 /* FactsListViewModel.swift */; };
 		1894232A23AF689800C6E988 /* FactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232923AF689800C6E988 /* FactsListViewController.swift */; };
-		1894232C23AF9CDC00C6E988 /* FactCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1894232B23AF9CDC00C6E988 /* FactCollectionViewCell.xib */; };
 		1894232E23AF9CF300C6E988 /* FactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232D23AF9CF300C6E988 /* FactCollectionViewCell.swift */; };
 		1894233023AFA06600C6E988 /* FactsListViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894232F23AFA06600C6E988 /* FactsListViewController+UICollectionView.swift */; };
 		1894233323AFA40200C6E988 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1894233223AFA40200C6E988 /* ImageDownloader.swift */; };
@@ -64,7 +63,6 @@
 		1894232523AF685500C6E988 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 		1894232723AF687000C6E988 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
 		1894232923AF689800C6E988 /* FactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewController.swift; sourceTree = "<group>"; };
-		1894232B23AF9CDC00C6E988 /* FactCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactCollectionViewCell.xib; sourceTree = "<group>"; };
 		1894232D23AF9CF300C6E988 /* FactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewCell.swift; sourceTree = "<group>"; };
 		1894232F23AFA06600C6E988 /* FactsListViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactsListViewController+UICollectionView.swift"; sourceTree = "<group>"; };
 		1894233223AFA40200C6E988 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 		1894232423AF682D00C6E988 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1894232B23AF9CDC00C6E988 /* FactCollectionViewCell.xib */,
 				1894232D23AF9CF300C6E988 /* FactCollectionViewCell.swift */,
 			);
 			path = View;
@@ -406,7 +403,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1894232C23AF9CDC00C6E988 /* FactCollectionViewCell.xib in Resources */,
 				1894230F23AF5F5000C6E988 /* Main.storyboard in Resources */,
 				1894235523AFC34C00C6E988 /* FactDetailLandscapeTableViewCell.xib in Resources */,
 				1894230D23AF5F5000C6E988 /* Assets.xcassets in Resources */,
